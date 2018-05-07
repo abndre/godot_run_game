@@ -1,0 +1,64 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Cenas/player_scen.gd" type="Script" id=1]
+[ext_resource path="res://Imagens/player/Run0.png" type="Texture" id=2]
+[ext_resource path="res://Imagens/player/Run1.png" type="Texture" id=3]
+[ext_resource path="res://Imagens/player/Run2.png" type="Texture" id=4]
+[ext_resource path="res://Imagens/player/Run3.png" type="Texture" id=5]
+[ext_resource path="res://Imagens/player/Run4.png" type="Texture" id=6]
+[ext_resource path="res://Imagens/player/Run7.png" type="Texture" id=7]
+[ext_resource path="res://Imagens/player/Idle0.png" type="Texture" id=8]
+[ext_resource path="res://Imagens/player/Jump3.png" type="Texture" id=9]
+[ext_resource path="res://Imagens/player/Jump4.png" type="Texture" id=10]
+[ext_resource path="res://Imagens/player/Jump0.png" type="Texture" id=11]
+
+[sub_resource type="SpriteFrames" id=1]
+
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Run",
+"speed": 15.0
+}, {
+"frames": [ ExtResource( 8 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "Fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 13.583
+height = 28.0906
+
+[node name="Player" type="KinematicBody2D" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+
+[node name="Sprite" type="AnimatedSprite" parent="." index="0"]
+
+position = Vector2( 0, 1 )
+frames = SubResource( 1 )
+animation = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+position = Vector2( 0.527039, 3.9528 )
+shape = SubResource( 2 )
+
+

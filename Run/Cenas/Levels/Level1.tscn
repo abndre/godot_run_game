@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Tilesets/Chao.tres" type="TileSet" id=1]
+[ext_resource path="res://Cenas/player_scen.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Cenas/LevelComplete.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Cenas/Paralax_cave.tscn" type="PackedScene" id=4]
+
+[node name="Level1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="." index="0"]
+
+mode = 0
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+cell_quadrant_size = 16
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+cell_half_offset = 2
+cell_tile_origin = 0
+cell_y_sort = false
+cell_clip_uv = false
+collision_use_kinematic = false
+collision_friction = 1.0
+collision_bounce = 0.0
+collision_layer = 1
+collision_mask = 1
+occluder_light_mask = 1
+format = 1
+tile_data = PoolIntArray( 0, 30, 0, 29, 29, 0, 65536, 30, 0, 65565, 29, 0, 131072, 30, 0, 131101, 29, 0, 196608, 30, 0, 196637, 29, 0, 262144, 30, 0, 262173, 29, 0, 327680, 30, 0, 327709, 29, 0, 393216, 30, 0, 393245, 29, 0, 458752, 30, 0, 458781, 29, 0, 524288, 30, 0, 524317, 29, 0, 589824, 30, 0, 589853, 29, 0, 655360, 30, 0, 655389, 29, 0, 720896, 30, 0, 720925, 29, 0, 786432, 30, 0, 851968, 30, 0, 917504, 21, 0, 917505, 21, 0, 917506, 21, 0, 917507, 21, 0, 917508, 21, 0, 917509, 21, 0, 917510, 21, 0, 917511, 21, 0, 917512, 21, 0, 917513, 21, 0, 917514, 21, 0, 917515, 21, 0, 917516, 21, 0, 917517, 21, 0, 917518, 21, 0, 917519, 21, 0, 917520, 21, 0, 917521, 21, 0, 917522, 21, 0, 917523, 21, 0, 917524, 21, 0, 917525, 21, 0, 917526, 21, 0, 917527, 21, 0, 917528, 21, 0, 917529, 21, 0, 917530, 21, 0, 917531, 21, 0, 917532, 21, 0, 917533, 21, 0, 983040, 31, 0, 983041, 31, 0, 983042, 31, 0, 983043, 31, 0, 983044, 31, 0, 983045, 31, 0, 983046, 31, 0, 983047, 31, 0, 983048, 31, 0, 983049, 31, 0, 983050, 31, 0, 983051, 31, 0, 983052, 31, 0, 983053, 31, 0, 983054, 31, 0, 983055, 31, 0, 983056, 31, 0, 983057, 31, 0, 983058, 31, 0, 983059, 31, 0, 983060, 31, 0, 983061, 31, 0, 983062, 31, 0, 983063, 31, 0, 983064, 31, 0, 983065, 31, 0, 983066, 31, 0, 983067, 31, 0, 983068, 31, 0, 983069, 31, 0, 1048576, 31, 0, 1048577, 31, 0, 1048578, 31, 0, 1048579, 31, 0, 1048580, 31, 0, 1048581, 31, 0, 1048582, 31, 0, 1048583, 31, 0, 1048584, 31, 0, 1048585, 31, 0, 1048586, 31, 0, 1048587, 31, 0, 1048588, 31, 0, 1048589, 31, 0, 1048590, 31, 0, 1048591, 31, 0, 1048592, 31, 0, 1048593, 31, 0, 1048594, 31, 0, 1048595, 31, 0, 1048596, 31, 0, 1048597, 31, 0, 1048598, 31, 0, 1048599, 31, 0, 1048600, 31, 0, 1048601, 31, 0, 1048602, 31, 0, 1048603, 31, 0, 1048604, 31, 0, 1048605, 31, 0 )
+_sections_unfolded = [ "Cell", "Occluder" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Player" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 110.264, 414.723 )
+
+[node name="LevelComplet" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 989.713, 421.601 )
+world = "res://Cenas/Levels/Level2.tscn"
+
+[node name="Paralax" parent="." index="3" instance=ExtResource( 4 )]
+
+

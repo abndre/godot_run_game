@@ -1,0 +1,32 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/layer_06_1920 x 1080.png-83cb8edeed065c82c0724090cb728140.stex"
+
+[deps]
+
+source_file="res://Imagens/paralax/paralax_floresta/layer_06_1920 x 1080.png"
+source_md5="4e6dc4e689c9ba5fa3ec92a4bd1f8351"
+
+dest_files=[ "res://.import/layer_06_1920 x 1080.png-83cb8edeed065c82c0724090cb728140.stex" ]
+dest_md5="d1ac3b882beccfb0a5b20684dadc1d0a"
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
