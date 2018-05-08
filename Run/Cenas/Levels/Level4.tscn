@@ -6,7 +6,7 @@
 [ext_resource path="res://Cenas/RestartLevel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Cenas/Paralax_cave.tscn" type="PackedScene" id=5]
 
-[node name="Level1" type="Node2D"]
+[node name="Level1" type="Node2D" index="0"]
 
 [node name="Player" parent="." index="0" instance=ExtResource( 1 )]
 
@@ -39,7 +39,7 @@ __meta__ = {
 [node name="LevelComplet" parent="." index="2" instance=ExtResource( 3 )]
 
 position = Vector2( 990.28, 412.849 )
-world = "res://Cenas/Levels/Level5.tscn"
+world = "res://Cenas/Menu.tscn"
 
 [node name="RestartLevel" parent="." index="3" instance=ExtResource( 4 )]
 
